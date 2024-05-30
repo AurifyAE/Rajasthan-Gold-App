@@ -1,5 +1,6 @@
 import { getFirestore, deleteDoc, getDoc, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js";
 import { app } from '../../../config/db.js';
+import { userID } from '../../../globals/global.js';
 
 const firestore = getFirestore(app)
 
@@ -72,7 +73,7 @@ readData()
 document.getElementById('alertDeleteBtn').addEventListener('click', async () => {
     console.log('delete btn');
     try {
-        const uid = '1s4ZN51tk8UxYfxtiNK5Ql9yhEP2';
+        const uid = userID;
 
         if (!uid) {
             console.error('User not authenticated');
@@ -153,7 +154,7 @@ rateAlert()
 // Function to read data from the Firestore collection
 async function readData() {
     // Get the UID of the authenticated user
-    const uid = '1s4ZN51tk8UxYfxtiNK5Ql9yhEP2';
+    const uid = userID;
 
     if (!uid) {
         console.error('User not authenticated');
@@ -185,7 +186,7 @@ async function readData() {
 // Function to save data to the Firestore collection
 async function saveData(data) {
     // Get the UID of the authenticated user
-    const uid = '1s4ZN51tk8UxYfxtiNK5Ql9yhEP2';
+    const uid = userID;
 
     if (!uid) {
         console.error('User not authenticated');

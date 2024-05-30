@@ -1,6 +1,7 @@
 // import { readSpreadValues } from '../core/spotrateDB.js';
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js";
 import { app } from '../../../config/db.js';
+import { userID } from '../../../globals/global.js';
 
 const script = document.createElement('script');
 script.src = 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js';
@@ -258,7 +259,7 @@ async function fetchData1() {
 
 async function readSpreadValues() {
     try {
-        const uid = '1s4ZN51tk8UxYfxtiNK5Ql9yhEP2';
+        const uid = userID;
         if (!uid) {
             console.error('User not authenticated');
             throw new Error('User not authenticated');
@@ -304,7 +305,7 @@ displaySpreadValues();
 // Function to read data from the Firestore collection
 async function readData() {
     // Get the UID of the authenticated user
-    const uid = '1s4ZN51tk8UxYfxtiNK5Ql9yhEP2';
+    const uid = userID;
 
     if (!uid) {
         console.error('User not authenticated');
