@@ -186,8 +186,8 @@ async function fetchData1() {
 
         document.getElementById("lowLabelGold").innerHTML = goldLow;
         document.getElementById("highLabelGold").innerHTML = goldHigh;
-        document.getElementById("lowLabelSilver").innerHTML = silverLowValue;
-        document.getElementById("highLabelSilver").innerHTML = silverHighValue;
+        document.getElementById("lowLabelSilver").innerHTML = silverLow;
+        document.getElementById("highLabelSilver").innerHTML = silverHigh;
 
         // var element;
 
